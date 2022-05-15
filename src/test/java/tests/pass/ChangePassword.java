@@ -21,10 +21,11 @@ public class ChangePassword {
     static void beforeAll() {
         Configuration.browserSize = "1400x800";
     }
+
     @Test
     @Story("Изменение пароля")
     @Owner("Олехандро")
-    void changePasswordFromProfile(){
+    void changePasswordFromProfile() {
         AuthorizationPage authorizationPage = new AuthorizationPage();
         step("Авторизация в мессенджере", () -> {
             authorizationPage.authorizationPage("istock.link.test@rambler.ru", "123123123");
