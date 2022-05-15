@@ -20,10 +20,10 @@ public class MessengerClicks {
     static void beforeAll() {
         Configuration.browserSize = "1400x800";
     }
+
     @Test
     @Story("Переход по всем разделам")
     @Owner("Олехандро")
-
     void clickMessengerButton() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         step("Авторизация в мессенджере", () -> {
@@ -32,21 +32,15 @@ public class MessengerClicks {
         });
 
         // добавить шаг клик по кнопкам табов
-        $(".cws-tabs__tab",2).click();
-        $(".cws-tabs__tab",1).click();
-        $(".cws-tabs__tab",0).click();
+        $(".cws-tabs__tab", 2).click();
+        $(".cws-tabs__tab", 1).click();
+        $(".cws-tabs__tab", 0).click();
         $(".cws-dashboard__left").$(byText("Все контакты")).click();
-        $(".cws-dropdown-menu-item_color_gray",2).click();
+        $(".cws-dropdown-menu-item_color_gray", 2).click();
         $(".cws-dashboard__left").$(byText("Заблокированные")).click();
-        $(".cws-dropdown-menu-item_color_gray",1).click();
+        $(".cws-dropdown-menu-item_color_gray", 1).click();
         $(".cws-dashboard__left").$(byText("Активные")).click();
-        $(".cws-dropdown-menu-item_color_gray",0).click();
-
-
-
-
-
-
+        $(".cws-dropdown-menu-item_color_gray", 0).click();
 
     }
 }

@@ -108,8 +108,6 @@ public class MenuButton {
         $(".layout-messenger__header").shouldHave(text("Мессенджер"));
         // резвернуть меню
         $(".snm-header__arrow").click();
-        sleep(2000
-        );
     }
 
         @Test
